@@ -1,0 +1,202 @@
+{
+    "discs" : [
+        {
+            "id": 1,
+            "model": "Leopard",
+            "type": "fairway",
+            "image": "./img/leop.webp",
+            "speed": 6,
+            "glide": 5,
+            "turn": -2,
+            "fade": 1,
+            "bagged": false
+        },
+        {
+            "id": 2,
+            "model": "Valkyrie",
+            "type": "distance",
+            "image": "./img/valk.webp",
+            "speed": 9,
+            "glide": 4,
+            "turn": -2,
+            "fade": 2,
+            "bagged": false
+        },
+        {
+            "id": 3,
+            "model": "Buzzz",
+            "type": "midrange",
+            "image": "./img/buzz.webp",
+            "speed": 5,
+            "glide": 4,
+            "turn": -1,
+            "fade": 1,
+            "bagged": false
+        },
+        {
+            "id": 4,
+            "model": "Thunderbird",
+            "type": "distance",
+            "image": "./img/thunderbird.webp",
+            "speed": 9,
+            "glide": 5,
+            "turn": 0,
+            "fade": 2,
+            "bagged": false
+        },
+        {
+            "id": 5,
+            "model": "Felon",
+            "type": "distance",
+            "image": "./img/felon.webp",
+            "speed": 9,
+            "glide": 3,
+            "turn": 0.5,
+            "fade": 4,
+            "bagged": false
+        },
+        {
+            "id": 6,
+            "model": "Insanity",
+            "type": "distance",
+            "image": "./img/insanity.webp",
+            "speed": 9,
+            "glide": 5,
+            "turn": -2,
+            "fade": 1.5,
+            "bagged": false
+        },
+        {
+            "id": 7,
+            "model": "Teebird3",
+            "type": "fairway",
+            "image": "./img/teebird3.webp",
+            "speed": 8,
+            "glide": 4,
+            "turn": 0,
+            "fade": 2,
+            "bagged": false
+        },
+        {
+            "id": 8,
+            "model": "Crave",
+            "type": "fairway",
+            "image": "./img/crave.webp",
+            "speed": 6.5,
+            "glide": 5,
+            "turn": -1,
+            "fade": 1,
+            "bagged": false
+        },
+        {
+            "id": 9,
+            "model": "Drone",
+            "type": "midrange",
+            "image": "./img/drone.webp",
+            "speed": 5,
+            "glide": 3,
+            "turn": 1,
+            "fade": 4,
+            "bagged": false
+        },
+        {
+            "id": 10,
+            "model": "Tactic",
+            "type": "putter",
+            "image": "./img/tactic.webp",
+            "speed": 4,
+            "glide": 2,
+            "turn": 0,
+            "fade": 3,
+            "bagged": false
+        },
+        {
+            "id": 11,
+            "model": "Warden",
+            "type": "putter",
+            "image": "./img/warden.webp",
+            "speed": 2,
+            "glide": 4,
+            "turn": 0,
+            "fade": 0.5,
+            "bagged": false
+        },
+        {
+            "id": 12,
+            "model": "Anode",
+            "type": "putter",
+            "image": "./img/anode.webp",
+            "speed": 3,
+            "glide": 3,
+            "turn": 0,
+            "fade": 0.5,
+            "bagged": false
+        },
+        {
+            "id": 13,
+            "model": "Ion",
+            "type": "putter",
+            "image": "./img/ion.webp",
+            "speed": 2.5,
+            "glide": 3,
+            "turn": 0,
+            "fade": 1.5,
+            "bagged": false
+        },
+        {
+            "id": 14,
+            "model": "Wraith",
+            "type": "distance",
+            "image": "./img/wraith.webp",
+            "speed": 11,
+            "glide": 5,
+            "turn": -1,
+            "fade": 3,
+            "bagged": false
+        },
+        {
+            "id": 15,
+            "model": "Destroyer",
+            "type": "distance",
+            "image": "./img/destroyer.webp",
+            "speed": 12,
+            "glide": 5,
+            "turn": -1,
+            "fade": 3,
+            "bagged": false
+        },
+        {
+            "id": 16,
+            "model": "Reactor",
+            "type": "midrange",
+            "image": "./img/reactor.webp",
+            "speed": 5,
+            "glide": 5,
+            "turn": -0.5,
+            "fade": 1.5,
+            "bagged": false
+        },
+        {
+            "id": 17,
+            "model": "Banger",
+            "type": "putter",
+            "image": "./img/banger.webp",
+            "speed": 2,
+            "glide": 3,
+            "turn": 0,
+            "fade": 1,
+            "bagged": false
+        },
+        {
+            "id": 18,
+            "model": "FD",
+            "type": "fairway",
+            "image": "./img/fd.webp",
+            "speed": 7,
+            "glide": 6,
+            "turn": 0,
+            "fade": 1,
+            "bagged": false
+        }
+    ]
+}
