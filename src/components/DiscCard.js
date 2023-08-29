@@ -2,7 +2,20 @@ import React from "react";
 import { Card, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function DiscCard({ disc }) {
+function DiscCard({ disc, setDiscs, discs }) {
+
+    function handleClick(e) {
+      fetch(`http://localhost:3000/discs/${disc.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({bagged: !disc.bagged
+        })
+      })
+      .then(res => res.json())
+      .then(data => console.log(data))
+    }
     
     return (
     
@@ -13,7 +26,7 @@ function DiscCard({ disc }) {
         <Card.Text>
           {disc.speed} / {disc.glide} / {disc.turn} / {disc.fade} 
         </Card.Text>
-        <Button variant={disc.bagged? "warning" : "primary"}  >{disc.bagged? "Remove" : "Add to bag"}</Button>
+        <Button variant={disc.bagged? "warning" : "primary"} onClick={handleClick}  >{disc.bagged? "Remove" : "Add to bag"}</Button>
       </Card.Body>
     </Card>
     
