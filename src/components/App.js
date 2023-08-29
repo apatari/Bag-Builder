@@ -1,6 +1,7 @@
 
 
 import { Button, Navbar, Nav } from 'react-bootstrap'
+import React, { useState, useEffect } from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiscBag from './DiscBag';
 import Header from './Header';
@@ -9,6 +10,15 @@ import Collection from './Collection';
 import AddDisc from './AddDisc';
 
 function App() {
+
+  const [discs, setDiscs] = useState([])
+
+    useEffect(() => {
+        fetch("http://localhost:3000/discs")
+        .then(res => res.json())
+        .then(data => setDiscs(data))
+    }, [])
+
   return (
     <div >
 
@@ -16,7 +26,7 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <DiscBag />
+          <DiscBag discs={discs} />
         </Route>
         <Route exact path="/collection">
           <Collection />

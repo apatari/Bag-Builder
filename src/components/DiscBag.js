@@ -3,15 +3,8 @@ import { Card, Col } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiscCard from "./DiscCard";
 
-function DiscBag() {
-
-    const [discs, setDiscs] = useState([])
-
-    useEffect(() => {
-        fetch("http://localhost:3000/discs")
-        .then(res => res.json())
-        .then(data => setDiscs(data))
-    }, []) 
+function DiscBag({ discs }) {
+ 
 
     return (
         <div>
