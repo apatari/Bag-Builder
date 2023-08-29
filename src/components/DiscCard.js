@@ -4,7 +4,19 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 function DiscCard({ disc, setDiscs, discs }) {
 
+    function onUpdateDiscs(updatedDisc) {
+      const updatedCollection = discs.map(item => {
+        if (item.id === updatedDisc.id) {
+          return updatedDisc
+        } else {
+          return item
+        }
+      })
+      setDiscs(updatedCollection)
+    }
+
     function handleClick(e) {
+
       fetch(`http://localhost:3000/discs/${disc.id}`, {
         method: "PATCH",
         headers: {
@@ -14,7 +26,7 @@ function DiscCard({ disc, setDiscs, discs }) {
         })
       })
       .then(res => res.json())
-      .then(data => console.log(data))
+      .then(updatedDisc => onUpdateDiscs(updatedDisc))
     }
     
     return (

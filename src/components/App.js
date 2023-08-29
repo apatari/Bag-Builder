@@ -26,10 +26,10 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <DiscBag discs={discs} />
+          <DiscBag discs={discs} setDiscs={setDiscs} />
         </Route>
         <Route exact path="/collection">
-          <Collection discs={discs} />
+          <Collection discs={discs} setDiscs={setDiscs} />
         </Route>
         <Route exact path="/new">
           <AddDisc />
