@@ -9,7 +9,7 @@
             "glide": 5,
             "turn": -2,
             "fade": 1,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 2,
@@ -20,7 +20,7 @@
             "glide": 4,
             "turn": -2,
             "fade": 2,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 3,
@@ -31,7 +31,7 @@
             "glide": 4,
             "turn": -1,
             "fade": 1,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 4,
@@ -42,7 +42,7 @@
             "glide": 5,
             "turn": 0,
             "fade": 2,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 5,
@@ -53,7 +53,7 @@
             "glide": 3,
             "turn": 0.5,
             "fade": 4,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 6,
@@ -119,7 +119,7 @@
             "glide": 4,
             "turn": 0,
             "fade": 0.5,
-            "bagged": false
+            "bagged": true
         },
         {
             "id": 12,

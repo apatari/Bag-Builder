@@ -6,7 +6,7 @@ function DiscCard({ disc }) {
     
     return (
     
-    <Card className="m-2 bd-highlight " style={{ width: '12rem' }}>
+    <Card className="m-2 bd-highlight bg-info bg-opacity-20 " style={{ width: '12rem' }}>
       <Card.Img className="img-thumbnail" variant="top" src={disc.image} />
       <Card.Body>
         <Card.Title>{disc.model}</Card.Title>
