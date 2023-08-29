@@ -1,5 +1,5 @@
-import logo from './logo.svg';
-import './App.css';
+
+
 import { Button, Navbar, Nav } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiscBag from './DiscBag';
