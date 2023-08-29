@@ -29,7 +29,7 @@ function App() {
           <DiscBag discs={discs} />
         </Route>
         <Route exact path="/collection">
-          <Collection />
+          <Collection discs={discs} />
         </Route>
         <Route exact path="/new">
           <AddDisc />

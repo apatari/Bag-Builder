@@ -13,7 +13,7 @@ function DiscCard({ disc }) {
         <Card.Text>
           {disc.speed} / {disc.glide} / {disc.turn} / {disc.fade} 
         </Card.Text>
-        <Button variant="primary">{disc.bagged? "Remove" : "Add to bag"}</Button>
+        <Button variant={disc.bagged? "warning" : "primary"}  >{disc.bagged? "Remove" : "Add to bag"}</Button>
       </Card.Body>
     </Card>
     
