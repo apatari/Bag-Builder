@@ -18,7 +18,11 @@ function Collection({ discs, setDiscs }) {
 
 
     const discsToDisplay = discs.filter(disc =>  disc.model.toLowerCase().includes(searchText.toLowerCase()))
-    discsToDisplay.sort(compareDecreasing)
+
+    if (sortBy === "sDec") {discsToDisplay.sort(compareDecreasing)}
+    if (sortBy === "sInc") {discsToDisplay.sort(compareIncreasing)}
+    
+    
 
     
     console.log(discsToDisplay)
