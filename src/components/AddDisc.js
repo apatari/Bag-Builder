@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Form, Container, Row, Col, Button, Toast } from "react-bootstrap";
+import DiscCard from "./DiscCard";
 
 function AddDisc({ onAddDisc }) {
 
@@ -106,6 +107,9 @@ function AddDisc({ onAddDisc }) {
             </Row>
             <Button type="submit" className="m-4" size="lg" disabled={invalidForm}>Submit</Button>
             </Form>
+            <div className="ms-5">
+                {invalidForm? <h4>Complete all fields for a disc preview</h4> : <DiscCard disc={formData} />}
+            </div>
             
         </div>
     )
