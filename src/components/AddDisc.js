@@ -24,14 +24,14 @@ function AddDisc() {
                 
                     <Form.Group className="m-3 ">
                         <Form.Label>Disc Model</Form.Label>
-                        <Form.Control type="text" name="model" placeholder="Model" />
+                        <Form.Control type="text" name="model" placeholder="Model" value={formData.model} />
                     </Form.Group>
                 
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                     <Form.Label>Type of disc</Form.Label>
-                        <Form.Select name="type" >
+                        <Form.Select name="type" value={formData.type}>
                             <option value="">Select a type</option>
                             <option value="distance">Distance driver</option>
                             <option value="fairway">Fairway driver</option>
@@ -43,7 +43,7 @@ function AddDisc() {
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Image URL</Form.Label>
-                        <Form.Control type="text"  placeholder="Image" />
+                        <Form.Control type="text"  placeholder="Image" value={formData.image} />
                     </Form.Group>
                 </Col>
             </Row>
@@ -51,25 +51,25 @@ function AddDisc() {
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Speed</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Speed" />
+                        <Form.Control type="number" step={0.5} placeholder="Speed" value={formData.speed} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Glide</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Glide" />
+                        <Form.Control type="number" step={0.5} placeholder="Glide" value={formData.glide} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Turn</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Turn" />
+                        <Form.Control type="number" step={0.5} placeholder="Turn" value={formData.turn} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Fade</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Fade" />
+                        <Form.Control type="number" step={0.5} placeholder="Fade" value={formData.fade} />
                     </Form.Group>
                 </Col>
             </Row>
