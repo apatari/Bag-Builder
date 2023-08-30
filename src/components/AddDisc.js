@@ -49,18 +49,18 @@ function AddDisc({ onAddDisc }) {
 
     return (
         <div>
-            <Form className="m-4 fw-bold" onSubmit={handleSubmit}> 
+            <Form className="m-5 fw-bold" onSubmit={handleSubmit}> 
             <Row>
                 <Col>
                 
-                    <Form.Group className="m-3 ">
+                    <Form.Group className="m-3">
                         <Form.Label htmlFor="model">Disc Model</Form.Label>
                         <Form.Control type="text" name="model" id="model" placeholder="Model" value={formData.model} onChange={handleChange} />
                     </Form.Group>
                 
                 </Col>
-                <Col>
-                    <Form.Group className="m-3 ">
+                <Col lg="3">
+                    <Form.Group className="m-3 " >
                     <Form.Label htmlFor="type">Type of disc</Form.Label>
                         <Form.Select name="type" id="type" value={formData.type} onChange={handleChange} >
                             <option value="">Select a type</option>
