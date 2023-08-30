@@ -49,7 +49,7 @@ function AddDisc({ onAddDisc }) {
 
     return (
         <div>
-            <Form className="m-4" onSubmit={handleSubmit}> 
+            <Form className="m-4 fw-bold" onSubmit={handleSubmit}> 
             <Row>
                 <Col>
                 
