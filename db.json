@@ -53,7 +53,7 @@
       "glide": 3,
       "turn": 0.5,
       "fade": 4,
-      "bagged": true
+      "bagged": false
     },
     {
       "id": 6,
@@ -119,7 +119,7 @@
       "glide": 4,
       "turn": 0,
       "fade": 0.5,
-      "bagged": true
+      "bagged": false
     },
     {
       "id": 12,
@@ -197,6 +197,17 @@
       "turn": 0,
       "fade": 1,
       "bagged": false
+    },
+    {
+      "model": "Stag",
+      "type": "fairway",
+      "image": "https://www.dynamicdiscs.com/cdn/shop/products/Stag-vip-green.jpg?v=1674157555",
+      "speed": "8",
+      "glide": "6",
+      "turn": "-1",
+      "fade": "2",
+      "bagged": true,
+      "id": 19
     }
   ]
 }

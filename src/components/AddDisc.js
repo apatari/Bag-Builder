@@ -1,9 +1,9 @@
 import React, { useState } from "react";
-import { Form, Container, Row, Col, Button, Dropdown } from "react-bootstrap";
+import { Form, Container, Row, Col, Button, Toast } from "react-bootstrap";
 
-function AddDisc() {
+function AddDisc({ onAddDisc }) {
 
-    const [formData, setFormData] = useState({
+    const blankDisc = {
         model: "",
         type: "",
         image: "",
@@ -12,9 +12,13 @@ function AddDisc() {
         turn: "",
         fade: "",
         bagged: false
-    })
+    }
 
-    const invalidForm = true
+    const [formData, setFormData] = useState(blankDisc)
+
+    const invalidForm = (formData.model === "" || formData.type === "" || formData.image === "" || 
+    formData.speed === "" || formData.glide === "" || formData.turn === "" ||
+    formData.fade === "")
 
     function handleChange(e) {
         const name = e.target.name
@@ -26,9 +30,26 @@ function AddDisc() {
 
     }
 
+    function handleSubmit(e) {
+        e.preventDefault()
+        fetch('http://localhost:3000/discs', {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(formData)
+        })
+        .then(res => res.json())
+        .then(disc => {
+            onAddDisc(disc)
+            alert(`Disc added: ${formData.model}`)
+            setFormData(blankDisc)
+        }) 
+    }
+
     return (
         <div>
-            <Form className="m-4">
+            <Form className="m-4" onSubmit={handleSubmit}> 
             <Row>
                 <Col>
                 
@@ -61,29 +82,29 @@ function AddDisc() {
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Speed</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Speed" name="speed" value={formData.speed} onChange={handleChange} />
+                        <Form.Control type="number" step={0.5} placeholder="-" name="speed" value={formData.speed} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Glide</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Glide" name="glide" value={formData.glide} onChange={handleChange} />
+                        <Form.Control type="number" step={0.5} placeholder="-" name="glide" value={formData.glide} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Turn</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Turn" name="turn" value={formData.turn} onChange={handleChange} />
+                        <Form.Control type="number" step={0.5} placeholder="-" name="turn" value={formData.turn} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
                         <Form.Label>Fade</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="Fade" name="fade" value={formData.fade} onChange={handleChange} />
+                        <Form.Control type="number" step={0.5} placeholder="-" name="fade" value={formData.fade} onChange={handleChange} />
                     </Form.Group>
                 </Col>
             </Row>
-            <Button className="m-4" size="lg" disabled={invalidForm}>Submit</Button>
+            <Button type="submit" className="m-4" size="lg" disabled={invalidForm}>Submit</Button>
             </Form>
             
         </div>

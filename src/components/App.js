@@ -19,6 +19,12 @@ function App() {
         .then(data => setDiscs(data))
     }, [])
 
+    function handleAddDisc(disc) {
+      setDiscs([
+        ...discs, disc
+      ])
+    }
+
   return (
     <div >
 
@@ -32,7 +38,7 @@ function App() {
           <Collection discs={discs} setDiscs={setDiscs} />
         </Route>
         <Route exact path="/new">
-          <AddDisc />
+          <AddDisc onAddDisc={handleAddDisc}/>
         </Route>
       </Switch>
 
