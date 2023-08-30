@@ -54,15 +54,15 @@ function AddDisc({ onAddDisc }) {
                 <Col>
                 
                     <Form.Group className="m-3 ">
-                        <Form.Label>Disc Model</Form.Label>
-                        <Form.Control type="text" name="model" placeholder="Model" value={formData.model} onChange={handleChange} />
+                        <Form.Label htmlFor="model">Disc Model</Form.Label>
+                        <Form.Control type="text" name="model" id="model" placeholder="Model" value={formData.model} onChange={handleChange} />
                     </Form.Group>
                 
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
-                    <Form.Label>Type of disc</Form.Label>
-                        <Form.Select name="type" value={formData.type} onChange={handleChange} >
+                    <Form.Label htmlFor="type">Type of disc</Form.Label>
+                        <Form.Select name="type" id="type" value={formData.type} onChange={handleChange} >
                             <option value="">Select a type</option>
                             <option value="distance">Distance driver</option>
                             <option value="fairway">Fairway driver</option>
@@ -73,34 +73,34 @@ function AddDisc({ onAddDisc }) {
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
-                        <Form.Label>Image URL</Form.Label>
-                        <Form.Control type="text"  placeholder="Image" name="image" value={formData.image} onChange={handleChange} />
+                        <Form.Label htmlFor="image">Image URL</Form.Label>
+                        <Form.Control type="text" id="image" placeholder="Image" name="image" value={formData.image} onChange={handleChange} />
                     </Form.Group>
                 </Col>
             </Row>
             <Row>
                 <Col>
                     <Form.Group className="m-3 ">
-                        <Form.Label>Speed</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="-" name="speed" value={formData.speed} onChange={handleChange} />
+                        <Form.Label htmlFor="speed">Speed</Form.Label>
+                        <Form.Control type="number" id="speed" step={0.5} placeholder="-" name="speed" value={formData.speed} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
-                        <Form.Label>Glide</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="-" name="glide" value={formData.glide} onChange={handleChange} />
+                        <Form.Label htmlFor="glide">Glide</Form.Label>
+                        <Form.Control type="number" id="glide" step={0.5} placeholder="-" name="glide" value={formData.glide} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
-                        <Form.Label>Turn</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="-" name="turn" value={formData.turn} onChange={handleChange} />
+                        <Form.Label htmlFor="turn">Turn</Form.Label>
+                        <Form.Control type="number" id="turn" step={0.5} placeholder="-" name="turn" value={formData.turn} onChange={handleChange} />
                     </Form.Group>
                 </Col>
                 <Col>
                     <Form.Group className="m-3 ">
-                        <Form.Label>Fade</Form.Label>
-                        <Form.Control type="number" step={0.5} placeholder="-" name="fade" value={formData.fade} onChange={handleChange} />
+                        <Form.Label htmlFor="fade">Fade</Form.Label>
+                        <Form.Control type="number" id="fade" step={0.5} placeholder="-" name="fade" value={formData.fade} onChange={handleChange} />
                     </Form.Group>
                 </Col>
             </Row>

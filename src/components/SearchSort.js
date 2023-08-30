@@ -1,10 +1,19 @@
 import React from "react";
-import { Form, Col, Row } from "react-bootstrap";
+import { Form, Col, Row, Container } from "react-bootstrap";
 
 function SearchSort() {
     return (
         <div>
-            <h2>searchsort</h2>
+            <Container>
+                <Row className="justify-content-md-center">
+                    <Col xs lg="4">
+                        Search bar
+                    </Col>
+                    <Col>
+                        Filter options
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
