@@ -33,13 +33,14 @@ function BagInfo({ discs }) {
     } , 0)
     
     return (
-        <div>
+        <div className="m-1 p-2 bg-info shadow rounded" >
 
-            <h3>Total discs: {baggedDiscs.length}</h3>
-            <h3>Distance drivers: {distances}</h3>
-            <h3>Fairway drivers: {fairways}</h3>
-            <h3>Midranges: {midranges}</h3>
-            <h3>Putters: {putters}</h3>
+            <h3 className="text-decoration-underline">Bag Info</h3>
+            <h4>Total discs: {baggedDiscs.length}</h4>
+            <h4>Distance drivers: {distances}</h4>
+            <h4>Fairway drivers: {fairways}</h4>
+            <h4>Midranges: {midranges}</h4>
+            <h4>Putters: {putters}</h4>
         </div>
     )
 }
