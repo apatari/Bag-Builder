@@ -16,7 +16,7 @@ function Header() {
             <Nav className='p-2 fs-4 text-white'>
                 <NavLink 
                     exact to="/" 
-                    className='text-white me-3' 
+                    className='text-white me-5 ms-3' 
                     style={linkStyles} 
                     activeStyle={{textDecoration: 'overline'}} 
                 >
@@ -24,7 +24,7 @@ function Header() {
                 </NavLink>
                 <NavLink 
                     exact to="/Collection" 
-                    className='text-white me-3' 
+                    className='text-white me-5' 
                     style={linkStyles} 
                     activeStyle={{textDecoration: 'overline'}} 
                 >
@@ -32,7 +32,7 @@ function Header() {
                 </NavLink>
                 <NavLink 
                     to="/new" 
-                    className='text-white me-3'
+                    className='text-white me-5'
                     style={linkStyles} 
                     activeStyle={{textDecoration: 'overline'}} 
                 >

@@ -10,7 +10,7 @@ function DiscBag({ discs, setDiscs, onMoveDisc }) {
     return (
         <div>
             <Row>
-            <Col className=" " > <div className="p-5" > <BagInfo className="position-sticky" discs={discs} /></div> 
+            <Col className=" " > <div className="p-2 mt-4 ms-2" > <BagInfo discs={discs} /></div> 
             </Col>
             <Col xs={9}  className="">
             <div className="p-2 m-4 rounded-3 bg-warning bg-opacity-50 ">
