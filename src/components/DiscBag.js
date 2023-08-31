@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Card, Col, Row } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiscCard from "./DiscCard";
+import BagInfo from './BagInfo';
 
 function DiscBag({ discs, setDiscs, onMoveDisc }) {
  
@@ -9,7 +10,7 @@ function DiscBag({ discs, setDiscs, onMoveDisc }) {
     return (
         <div>
             <Row>
-            <Col className="bg-danger" > <div className="p-4" > <h4>Disc Info goes here</h4></div> 
+            <Col className=" " > <div className="p-5" > <BagInfo discs={discs} /></div> 
             </Col>
             <Col xs={9}  className="">
             <div className="p-2 m-4 rounded-3 bg-warning bg-opacity-50 ">

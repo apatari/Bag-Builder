@@ -9,6 +9,7 @@ import { Route, Switch } from 'react-router-dom/cjs/react-router-dom.min';
 import Collection from './Collection';
 import AddDisc from './AddDisc';
 
+
 function App() {
 
   const [discs, setDiscs] = useState([])

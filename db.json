@@ -86,7 +86,7 @@
       "glide": 5,
       "turn": -1,
       "fade": 1,
-      "bagged": false
+      "bagged": true
     },
     {
       "id": 9,
@@ -206,7 +206,7 @@
       "glide": "6",
       "turn": "-1",
       "fade": "2",
-      "bagged": true,
+      "bagged": false,
       "id": 19
     }
   ]

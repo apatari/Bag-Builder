@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Form, Container, Row, Col, Button, Toast } from "react-bootstrap";
+import { Form, Modal, Row, Col, Button, Toast } from "react-bootstrap";
 import DiscCard from "./DiscCard";
 
 function AddDisc({ onAddDisc }) {
@@ -16,6 +16,9 @@ function AddDisc({ onAddDisc }) {
     }
 
     const [formData, setFormData] = useState(blankDisc)
+    const [showModal, setShowModal] = useState(false)
+
+    function handleModal() {setShowModal((showModal) => !showModal)}
 
     const invalidForm = (formData.model === "" || formData.type === "" || formData.image === "" || 
     formData.speed === "" || formData.glide === "" || formData.turn === "" ||
@@ -43,7 +46,7 @@ function AddDisc({ onAddDisc }) {
         .then(res => res.json())
         .then(disc => {
             onAddDisc(disc)
-            alert(`Disc added: ${formData.model}`)
+            handleModal()
             setFormData(blankDisc)
         }) 
     }
@@ -112,8 +115,24 @@ function AddDisc({ onAddDisc }) {
             <Button type="submit" className="m-4" size="lg" disabled={invalidForm}>Submit</Button>
             </Form>
             <div className="ms-5">
-                {invalidForm? <h4>Complete all fields for a disc preview</h4> : <DiscCard disc={formData} onMoveDisc={doNotMoveDisc} />}
+                {invalidForm? <h4>Complete all fields for a disc preview</h4> : 
+                <div className="m-3"> 
+                    <h5>Preview:</h5> 
+                    <DiscCard disc={formData} onMoveDisc={doNotMoveDisc} /> 
+                </div>}
             </div>
+
+        <Modal show={showModal} onHide={handleModal}>
+            <Modal.Header>
+            <Modal.Title>Disc added!</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>Navigate to the 'Select Discs' section to see your new disc </Modal.Body>
+            <Modal.Footer>
+            <Button variant="secondary" onClick={handleModal}>
+                Close
+            </Button>
+            </Modal.Footer>
+        </Modal>
             
         </div>
     )
