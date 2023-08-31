@@ -64,7 +64,7 @@
       "glide": 5,
       "turn": -2,
       "fade": 1.5,
-      "bagged": true
+      "bagged": false
     },
     {
       "id": 7,

@@ -3,7 +3,7 @@ import { Card, Col, Row } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import DiscCard from "./DiscCard";
 
-function DiscBag({ discs, setDiscs }) {
+function DiscBag({ discs, setDiscs, onMoveDisc }) {
  
 
     return (
@@ -18,7 +18,7 @@ function DiscBag({ discs, setDiscs }) {
                 <Col className="d-flex flex-wrap p-3 ">
                     
                     {discs.filter(disc => (disc.bagged && disc.type === 'distance'))
-                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs} discs={discs} /> )})} 
+                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs} discs={discs} onMoveDisc={onMoveDisc} /> )})} 
                 </Col>
             </div>
             <div className="p-2 m-4  rounded-3 bg-primary bg-opacity-50 ">
@@ -26,7 +26,7 @@ function DiscBag({ discs, setDiscs }) {
                 <Col className="d-flex flex-wrap p-3 ">
                     
                     {discs.filter(disc => (disc.bagged && disc.type === 'fairway'))
-                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} /> )})} 
+                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} onMoveDisc={onMoveDisc} /> )})} 
                 </Col>
             </div>
             <div className="p-2 m-4  rounded-3 bg-secondary bg-opacity-50 ">
@@ -34,7 +34,7 @@ function DiscBag({ discs, setDiscs }) {
                 <Col className="d-flex flex-wrap p-3 ">
                     
                     {discs.filter(disc => (disc.bagged && disc.type === 'midrange'))
-                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} /> )})} 
+                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} onMoveDisc={onMoveDisc} /> )})} 
                 </Col>
             </div>
             <div className="p-2 m-4  rounded-3 bg-success bg-opacity-50 ">
@@ -42,7 +42,7 @@ function DiscBag({ discs, setDiscs }) {
                 <Col className="d-flex flex-wrap p-3 ">
                     
                     {discs.filter(disc => (disc.bagged && disc.type === 'putter'))
-                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} /> )})} 
+                    .map(disc => {return ( <DiscCard disc={disc} key={disc.id} setDiscs={setDiscs}  discs={discs} onMoveDisc={onMoveDisc} /> )})} 
                 </Col>
             </div>
             </Col>

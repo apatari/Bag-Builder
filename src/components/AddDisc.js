@@ -48,6 +48,10 @@ function AddDisc({ onAddDisc }) {
         }) 
     }
 
+    function doNotMoveDisc(disc) {
+        
+    }
+
     return (
         <div>
             <Form className="m-5 fw-bold" onSubmit={handleSubmit}> 
@@ -108,7 +112,7 @@ function AddDisc({ onAddDisc }) {
             <Button type="submit" className="m-4" size="lg" disabled={invalidForm}>Submit</Button>
             </Form>
             <div className="ms-5">
-                {invalidForm? <h4>Complete all fields for a disc preview</h4> : <DiscCard disc={formData} />}
+                {invalidForm? <h4>Complete all fields for a disc preview</h4> : <DiscCard disc={formData} onMoveDisc={doNotMoveDisc} />}
             </div>
             
         </div>

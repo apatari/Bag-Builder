@@ -25,6 +25,31 @@ function App() {
       ])
     }
 
+    function handleMoveDisc(disc) {
+
+      fetch(`http://localhost:3000/discs/${disc.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({bagged: !disc.bagged
+        })
+      })
+      .then(res => res.json())
+      .then(updatedDisc => onUpdateDiscs(updatedDisc))
+    }
+
+    function onUpdateDiscs(updatedDisc) {
+      const updatedCollection = discs.map(item => {
+        if (item.id === updatedDisc.id) {
+          return updatedDisc
+        } else {
+          return item
+        }
+      })
+      setDiscs(updatedCollection)
+    }
+
   return (
     <div >
 
@@ -32,10 +57,10 @@ function App() {
 
       <Switch>
         <Route exact path="/">
-          <DiscBag discs={discs} setDiscs={setDiscs} />
+          <DiscBag discs={discs} setDiscs={setDiscs} onMoveDisc={handleMoveDisc} />
         </Route>
         <Route exact path="/collection">
-          <Collection discs={discs} setDiscs={setDiscs} />
+          <Collection discs={discs} setDiscs={setDiscs} onMoveDisc={handleMoveDisc} />
         </Route>
         <Route exact path="/new">
           <AddDisc onAddDisc={handleAddDisc}/>

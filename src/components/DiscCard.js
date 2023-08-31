@@ -2,32 +2,13 @@ import React from "react";
 import { Card, Button } from 'react-bootstrap'
 import 'bootstrap/dist/css/bootstrap.min.css'
 
-function DiscCard({ disc, setDiscs, discs }) {
+function DiscCard({ disc, onMoveDisc }) {
 
-    function onUpdateDiscs(updatedDisc) {
-      const updatedCollection = discs.map(item => {
-        if (item.id === updatedDisc.id) {
-          return updatedDisc
-        } else {
-          return item
-        }
-      })
-      setDiscs(updatedCollection)
-    }
+  function handleClick() {
+    onMoveDisc(disc)
+  }
 
-    function handleClick(e) {
-
-      fetch(`http://localhost:3000/discs/${disc.id}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        body: JSON.stringify({bagged: !disc.bagged
-        })
-      })
-      .then(res => res.json())
-      .then(updatedDisc => onUpdateDiscs(updatedDisc))
-    }
+  
     
     return (
     

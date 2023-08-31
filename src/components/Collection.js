@@ -3,7 +3,7 @@ import DiscCard from "./DiscCard";
 import { Col } from "react-bootstrap";
 import SearchSort from "./SearchSort";
 
-function Collection({ discs, setDiscs }) {
+function Collection({ discs, setDiscs, onMoveDisc }) {
 
     const [searchText, setSearchText] = useState("")
     const [sortBy, setSortBy] = useState("")
@@ -34,7 +34,7 @@ function Collection({ discs, setDiscs }) {
                 <Col className="d-flex flex-wrap p-3 ">
                     {discsToDisplay.map(disc => {
                 return ( 
-                        <DiscCard disc={disc} key={disc.id} discs={discs} setDiscs={setDiscs} />  
+                        <DiscCard disc={disc} key={disc.id} discs={discs} setDiscs={setDiscs} onMoveDisc={onMoveDisc} />  
                     )})}
                 </Col>
             </div>
