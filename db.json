@@ -86,7 +86,7 @@
       "glide": 5,
       "turn": -1,
       "fade": 1,
-      "bagged": true
+      "bagged": false
     },
     {
       "id": 9,
@@ -208,6 +208,17 @@
       "fade": "2",
       "bagged": false,
       "id": 19
+    },
+    {
+      "model": "River",
+      "type": "fairway",
+      "image": "https://infinitediscs.com/Inf_Uploads/DiscProducts/W675_River14a.Webp",
+      "speed": "7",
+      "glide": "7",
+      "turn": "-1",
+      "fade": "1",
+      "bagged": false,
+      "id": 20
     }
   ]
 }
