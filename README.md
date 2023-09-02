@@ -23,6 +23,8 @@ Add discs using the 'Add New Discs' tab.  The submit button and a preview of you
 
 A browser window should open up with the app running.  
 
-# Thanks to the folks who created and maintain the Create React App and Bootstrap React
+## Acknowledgment
+
+Thanks to the folks who created and maintain the Create React App and Bootstrap React
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), and uses [Bootstrap React](https://react-bootstrap.netlify.app/) for styling.
