@@ -217,7 +217,7 @@
       "glide": "7",
       "turn": "-1",
       "fade": "1",
-      "bagged": false,
+      "bagged": true,
       "id": 20
     }
   ]

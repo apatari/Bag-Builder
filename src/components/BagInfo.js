@@ -7,28 +7,28 @@ function BagInfo({ discs }) {
 
     const distances = baggedDiscs.reduce((acc, disc) => {
         if (disc.type === "distance") {
-            console.log(disc.model)
+            
             return (acc + 1)} 
         else {return acc}
     } , 0)
     
     const fairways = baggedDiscs.reduce((acc, disc) => {
         if (disc.type === "fairway") {
-            console.log(disc.model)
+            
             return (acc + 1)} 
         else {return acc}
     } , 0)
 
     const midranges = baggedDiscs.reduce((acc, disc) => {
         if (disc.type === "midrange") {
-            console.log(disc.model)
+            
             return (acc + 1)} 
         else {return acc}
     } , 0)
 
     const putters = baggedDiscs.reduce((acc, disc) => {
         if (disc.type === "putter") {
-            console.log(disc.model)
+            
             return (acc + 1)} 
         else {return acc}
     } , 0)

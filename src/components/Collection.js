@@ -25,7 +25,7 @@ function Collection({ discs, setDiscs, onMoveDisc }) {
     
 
     
-    console.log(discsToDisplay)
+    
 
     return(
         <div>
